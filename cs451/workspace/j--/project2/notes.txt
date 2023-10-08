@@ -1,0 +1,22 @@
+1. Provide a high-level description (ie, using minimal amount of technical
+   jargon) of the project in no more than 200 words.
+
+      Began problem 1 by understanding multiline comments then modify Scanner.java to support multiline
+   comment by seeing it as a whitespace character.
+      Began problems 2, 3 and 4 by defining tokens in TokenInfo.java then modifying Scanner.java to 
+   recognize it by adding and modifying cases while adding reserved words in the hashtable.
+
+2. Did you receive help from anyone? List their names, status (classmate, 
+   CS451/651 grad, TA, other), and the nature of help received.
+
+   Name               Status       Help Received
+   ----               ------       -------------
+
+   N/A                N/A          N/A
+
+3. List any other comments here. Feel free to provide any feedback on how
+   much you learned from doing the assignment, and whether you enjoyed
+   doing it.
+
+   Modified TokenInfo.java to be sorted alphabetically. I learned how to easily add operators and reserved words in j--.
+   Adding support for long and double literal was straight forward.
