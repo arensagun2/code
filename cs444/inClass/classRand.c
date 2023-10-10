@@ -4,6 +4,6 @@
 
 int main (void) {
 	srand(time(NULL));
-	int result = rand();
-	printf("random value on [0, %d]: %d\n", RAND_MAX, result);
+	int result = rand() % 100000;
+	printf("%d\n", result);
 }
