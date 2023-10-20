@@ -1,6 +1,10 @@
 {
+  "name": "tianbot",
+  "version": "0.1",
+  "main": "./src/index.js",
   "dependencies": {
-    "discord.js": "^14.13.0"
-  },
-  "main": "./main.js"
+    "discord.js": "^14.13.0",
+    "dotenv": "^16.3.1",
+    "node": "^21.0.0"
+  }
 }
