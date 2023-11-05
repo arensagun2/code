@@ -894,8 +894,8 @@ public class Parser {
         JExpression expr = expression();
         if (expr instanceof JAssignment
                 || expr instanceof JPreIncrementOp
-                || expr instanceof JPreDecrementOp
                 || expr instanceof JPostIncrementOp
+                || expr instanceof JPreDecrementOp
                 || expr instanceof JPostDecrementOp
                 || expr instanceof JMessageExpression
                 || expr instanceof JSuperConstruction
@@ -1139,7 +1139,7 @@ public class Parser {
      * Parses a relational expression and returns an AST for it.
      *
      * <pre>
-     *   relationalExpression ::= additiveExpression [ ( GE | GT | LE | LT ) additiveExpression
+     *   relationalExpression ::= additiveExpression [ ( GE | GT | LE | LT ) shiftExpression
      *                                               | INSTANCEOF referenceType ]
      * </pre>
      *
@@ -1199,7 +1199,7 @@ public class Parser {
      * Parses an additive expression and returns an AST for it.
      *
      * <pre>
-     *   additiveExpression ::= multiplicativeExpression { MINUS | PLUS multiplicativeExpression }
+     *   additiveExpression ::= multiplicativeExpression { ( MINUS | PLUS ) multiplicativeExpression }
      * </pre>
      *
      * @return an AST for an additive expression.
@@ -1224,7 +1224,7 @@ public class Parser {
      * Parses a multiplicative expression and returns an AST for it.
      *
      * <pre>
-     *   multiplicativeExpression ::= unaryExpression { DIV | REM | STAR unaryExpression }
+     *   multiplicativeExpression ::= unaryExpression { ( DIV | REM | STAR ) unaryExpression }
      * </pre>
      *
      * @return an AST for a multiplicative expression.
@@ -1311,7 +1311,7 @@ public class Parser {
      * Parses a postfix expression and returns an AST for it.
      *
      * <pre>
-     *   postfixExpression ::= primary { selector } { DEC } { INC }
+     *   postfixExpression ::= primary { selector } { DEC | INC }
      * </pre>
      *
      * @return an AST for a postfix expression.

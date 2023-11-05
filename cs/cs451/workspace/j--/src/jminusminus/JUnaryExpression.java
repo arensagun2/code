@@ -297,9 +297,8 @@ class JComplementOp extends JUnaryExpression {
      * {@inheritDoc}
      */
     public void codegen(CLEmitter output) {
-        output.addNoArgInstruction(ICONST_1);
-        output.addNoArgInstruction(INEG);
         operand.codegen(output);
+        output.addNoArgInstruction(ICONST_M1);
         output.addNoArgInstruction(IXOR);
     }
 }
