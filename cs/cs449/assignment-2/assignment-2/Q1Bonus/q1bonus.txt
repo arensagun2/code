@@ -1,0 +1,2 @@
+Had the same offset as 32-bit shellcode.
+Chose a different return address.
