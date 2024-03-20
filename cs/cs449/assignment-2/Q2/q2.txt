@@ -1,3 +1,0 @@
-First, I logged in Samy's account then "Edit Profile"; then adding a JS code to the brief description.
-This gave me an alert everytime I went to Samy's account page, even from another account.
-The link was copied from the button's action when adding Samy in another account by right-clicking and copying link-address.

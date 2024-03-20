@@ -1,1 +1,0 @@
-alert("mosh is gay")

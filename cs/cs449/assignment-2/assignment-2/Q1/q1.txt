@@ -1,9 +1,0 @@
-The first thing I did is to put random numbers for XXXX and YYYY for it to compile.
-Then I used a debugger, gdb, to find the offset, and the return address. I used the command,
-"info registers" to caclulate the offset, by determining the distance between the
-start of the buffer and the return address. Which is why I got 17.
-
-For modifying the return address, I use gdb again to chose an address for the new return address.
-
-For modifying ZZZZ, I chose a number before the return address and after the "malicous code",
-where no operation happens.
